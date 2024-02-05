@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
-
 import { useToast } from "@/components/ui/use-toast";
 import User from "./User";
 import { ListProps, ChildProps } from "@/types/interface";
-
 
 export default function List({ searchValue }: ListProps) {
   const BASE_URL = "https://api.github.com/search/users?q=";
@@ -24,7 +22,6 @@ export default function List({ searchValue }: ListProps) {
         const data = await res.json();
         if (data.items.length === 0) setIsError(true);
         setList(data.items.slice(0, 5));
-        console.log(data);
       } catch (err) {
         console.warn(err);
       } finally {
