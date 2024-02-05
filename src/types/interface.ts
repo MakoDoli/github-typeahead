@@ -9,6 +9,9 @@ export interface ChildProps {
 }
 
 export interface UserProps {
-    src: string;
-    name: string;
-  }
+  src: string;
+  name: string;
+}
+export interface SearchProps {
+  setUser: (e: string) => void;
+}

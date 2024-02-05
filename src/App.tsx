@@ -1,20 +1,14 @@
-import { ChangeEvent, useState } from "react";
-import { Input } from "./components/ui/input";
+import { useState } from "react";
 import List from "./ui/List";
 import { Toaster } from "./components/ui/toaster";
+import SearchInput from "./ui/SearchInput";
 
 function App() {
   const [user, setUser] = useState("");
 
-  function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    window.setTimeout(() => {
-      setUser(e.target.value);
-    }, 2000);
-  }
-
   return (
     <div className="py-8 px-12">
-      <Input onChange={handleChange} />
+      <SearchInput setUser={setUser} />
       <List searchValue={user} />
       <Toaster />
     </div>
