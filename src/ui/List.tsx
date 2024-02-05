@@ -3,10 +3,9 @@ import Spinner from "./Spinner";
 
 import { useToast } from "@/components/ui/use-toast";
 import User from "./User";
+import { ListProps, ChildProps } from "@/types/interface";
 
-interface ListProps {
-  searchValue: string;
-}
+
 export default function List({ searchValue }: ListProps) {
   const BASE_URL = "https://api.github.com/search/users?q=";
 
@@ -14,7 +13,7 @@ export default function List({ searchValue }: ListProps) {
 
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState<ChildProps[]>([]);
 
   useEffect(() => {
     const getData = async () => {
