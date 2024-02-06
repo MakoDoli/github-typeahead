@@ -4,9 +4,9 @@ import { useToast } from "@/components/ui/use-toast";
 import User from "./User";
 import { ListProps, ChildProps } from "@/types/interface";
 
-export default function List({ searchValue }: ListProps) {
-  const BASE_URL = "https://api.github.com/search/users?q=";
+const BASE_URL = "https://api.github.com/search/users?q=";
 
+export default function List({ searchValue }: ListProps) {
   const { toast } = useToast();
 
   const [isLoading, setIsLoading] = useState(false);
