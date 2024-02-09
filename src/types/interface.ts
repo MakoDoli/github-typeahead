@@ -6,11 +6,13 @@ export interface ChildProps {
   login: string;
   avatar_url: string;
   id: number;
+  html_url: string;
 }
 
 export interface UserProps {
   src: string;
   name: string;
+  url: string;
 }
 export interface SearchProps {
   setUser: (e: string) => void;
