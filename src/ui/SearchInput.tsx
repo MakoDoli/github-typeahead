@@ -1,14 +1,16 @@
 import { Input } from "@/components/ui/input";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useRef } from "react";
 import { SearchProps } from "@/types/interface";
 
 export default function SearchInput({ setUser }: SearchProps) {
-  let timeoutId: number;
+  const timeoutId = useRef<NodeJS.Timeout | null>(null);
+
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
-    clearTimeout(timeoutId);
-    timeoutId = window.setTimeout(() => {
+    if (timeoutId.current) clearTimeout(timeoutId.current);
+    timeoutId.current = setTimeout(() => {
       setUser(e.target.value);
-    }, 2000);
+    }, 1000);
   }
+
   return <Input onChange={handleChange} />;
 }

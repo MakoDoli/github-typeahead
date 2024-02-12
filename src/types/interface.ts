@@ -14,6 +14,12 @@ export interface UserProps {
   name: string;
   url: string;
 }
+
 export interface SearchProps {
   setUser: (e: string) => void;
+}
+
+export interface LoaderContextType {
+  isLoading: boolean;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
 }
