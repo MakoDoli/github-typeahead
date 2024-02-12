@@ -1,7 +1,7 @@
 import { useState } from "react";
-import List from "./ui/List";
+import List from "./components/List";
 import { Toaster } from "./components/ui/toaster";
-import SearchInput from "./ui/SearchInput";
+import SearchInput from "./components/SearchInput";
 import { LoaderProvider } from "./context/LoaderContext";
 
 function App() {
