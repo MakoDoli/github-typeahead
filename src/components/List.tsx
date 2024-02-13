@@ -8,9 +8,13 @@ import { useContext } from "react";
 
 export default function List({ searchValue, amount }: ListProps) {
   const [list] = useFetchData(BASE_URL, searchValue);
+
   const { isLoading } = useContext(LoaderContext);
+
+  const slicedList = amount === "all" ? list : list.slice(0, Number(amount));
+
   if (isLoading) return <Spinner />;
-const slicedList = amount === 'all' ? list : list.slice(0, Number(amount) )
+
   return (
     <div className="inline-block">
       {slicedList.map((item) => (

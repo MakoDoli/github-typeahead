@@ -40,6 +40,7 @@ function UserInfo() {
     html_url: htmlUrl,
     public_repos: publicRepos,
   } = info;
+
   async function getData(url: string, id: string) {
     try {
       setisLoading(true);
@@ -52,6 +53,7 @@ function UserInfo() {
       setisLoading(false);
     }
   }
+
   if (isLoading) return <Spinner />;
   return (
     <div className="w-[300px] md:w-[500px] border border-slate-300 shadow-md  rounded -2xl  mx-auto mt-12 text-center p-2">

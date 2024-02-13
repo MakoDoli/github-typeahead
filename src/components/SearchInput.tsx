@@ -16,6 +16,7 @@ export default function SearchInput({ setUser, setAmount }: SearchProps) {
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   const [results, setResults] = useState("5");
+
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeoutId.current = setTimeout(() => {
