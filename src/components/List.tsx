@@ -6,14 +6,14 @@ import { BASE_URL } from "@/utils/constants";
 import useFetchData from "@/utils/useFetchData";
 import { useContext } from "react";
 
-export default function List({ searchValue }: ListProps) {
+export default function List({ searchValue, amount }: ListProps) {
   const [list] = useFetchData(BASE_URL, searchValue);
   const { isLoading } = useContext(LoaderContext);
   if (isLoading) return <Spinner />;
-
+const slicedList = amount === 'all' ? list : list.slice(0, Number(amount) )
   return (
     <div className="inline-block">
-      {list.map((item) => (
+      {slicedList.map((item) => (
         <User
           name={item.login}
           key={item.id}

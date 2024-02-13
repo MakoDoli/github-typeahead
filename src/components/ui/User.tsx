@@ -1,9 +1,9 @@
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import { UserProps } from "@/types/interface";
+import { UserResultProps } from "@/types/interface";
 import { Link } from "@tanstack/react-router";
 
-export default function User({ src, name }: UserProps) {
+export default function User({ src, name }: UserResultProps) {
   return (
     <Link to="/userInfo/$postId" params={{ postId: name }}>
       {" "}

@@ -6,12 +6,13 @@ import { LoaderProvider } from "./context/LoaderContext";
 
 function App() {
   const [user, setUser] = useState("");
+  const [amount, setAmount] = useState("5");
 
   return (
     <LoaderProvider>
-      <div className="py-8 px-12">
-        <SearchInput setUser={setUser} />
-        <List searchValue={user} />
+      <div className="py-8 px-6 lg:px-48">
+        <SearchInput setUser={setUser} setAmount={setAmount} />
+        <List searchValue={user} amount={amount} />
         <Toaster />
       </div>
     </LoaderProvider>
