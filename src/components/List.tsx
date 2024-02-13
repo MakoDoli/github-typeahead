@@ -1,19 +1,23 @@
 import { LoaderContext } from "@/context/LoaderContext";
-import Spinner from "./Spinner";
-import User from "./User";
+import Spinner from "./ui/Spinner";
+import User from "./ui/User";
 import { ListProps } from "@/types/interface";
 import { BASE_URL } from "@/utils/constants";
 import useFetchData from "@/utils/useFetchData";
 import { useContext } from "react";
 
-export default function List({ searchValue }: ListProps) {
+export default function List({ searchValue, amount }: ListProps) {
   const [list] = useFetchData(BASE_URL, searchValue);
+
   const { isLoading } = useContext(LoaderContext);
+
+  const slicedList = amount === "all" ? list : list.slice(0, Number(amount));
+
   if (isLoading) return <Spinner />;
 
   return (
     <div className="inline-block">
-      {list.map((item) => (
+      {slicedList.map((item) => (
         <User
           name={item.login}
           key={item.id}
