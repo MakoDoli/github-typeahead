@@ -1,5 +1,5 @@
 import { Input } from "@/components/ui/input";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useRef, useState } from "react";
 import { SearchProps } from "@/types/interface";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,13 +11,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { LoaderContext } from "@/context/LoaderContext";
 
 export default function SearchInput({
-  setUser,
   setAmount,
   setTheme,
   mode,
 }: SearchProps) {
+  const { setSearchValue } = useContext(LoaderContext);
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   const [results, setResults] = useState("5");
@@ -26,8 +27,9 @@ export default function SearchInput({
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeoutId.current = setTimeout(() => {
-      setUser(e.target.value);
-      sessionStorage.search = e.target.value;
+      //setUser(e.target.value);
+      //sessionStorage.search = e.target.value;
+      setSearchValue(e.target.value);
     }, 1000);
   }
 

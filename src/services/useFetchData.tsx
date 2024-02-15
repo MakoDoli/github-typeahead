@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ChildProps } from "@/types/interface";
-import { message } from "./constants";
+import { message } from "../utils/constants";
 import { useToast } from "@/components/ui/use-toast";
 import { LoaderContext } from "@/context/LoaderContext";
 

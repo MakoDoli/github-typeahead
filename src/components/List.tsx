@@ -3,11 +3,12 @@ import Spinner from "./ui/Spinner";
 import User from "./ui/User";
 import { ListProps } from "@/types/interface";
 import { BASE_URL } from "@/utils/constants";
-import useFetchData from "@/utils/useFetchData";
+import useFetchData from "@/services/useFetchData";
 import { useContext } from "react";
 
 export default function List({ amount }: ListProps) {
-  const [list] = useFetchData(BASE_URL, sessionStorage.search);
+  const { searchValue } = useContext(LoaderContext);
+  const [list] = useFetchData(BASE_URL, searchValue);
 
   const { isLoading } = useContext(LoaderContext);
 
