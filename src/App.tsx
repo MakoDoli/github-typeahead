@@ -23,7 +23,7 @@ function App() {
   }, [theme]);
   return (
     <LoaderProvider>
-      <div className="py-8 px-6 lg:px-48  h-screen dark:bg-slate-800">
+      <div className="py-8 px-6 lg:px-48  min-h-screen dark:bg-slate-800">
         <SearchInput
           setUser={setUser}
           setAmount={setAmount}
