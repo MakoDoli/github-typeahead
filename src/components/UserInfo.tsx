@@ -4,15 +4,14 @@ import { UserType } from "@/types/interface";
 import { BASE_URL_USER } from "@/utils/constants";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import {SearchType} from '../types/interface'
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import github from "../assets/github.png";
 
-interface SearchType {
-  searchValue: string;
-}
 function UserInfo({ searchValue }: SearchType) {
   const postId = searchValue;
 
@@ -66,6 +65,7 @@ function UserInfo({ searchValue }: SearchType) {
           <HoverCardContent className="w-80">
             <div className="flex justify-between space-x-4">
               <a href={htmlUrl} target="_blank" rel="noreferrer">
+                <img src={github} />
                 <div className="space-y-1">
                   <h4 className="text-sm text-teal-500 font-semibold">
                     Click here for

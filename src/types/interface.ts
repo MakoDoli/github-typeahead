@@ -1,6 +1,9 @@
 export interface ListProps {
   amount: string;
 }
+export interface SearchType {
+  searchValue: string;
+}
 
 export interface ChildProps {
   login: string;
