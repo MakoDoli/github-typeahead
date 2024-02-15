@@ -44,7 +44,7 @@ export default function SearchInput({
       <Input className="dark:text-white" onChange={handleChange} />
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="dark:text-white">
+          <Button variant="outline" className="dark:text-teal-500">
             Showing {results} results
           </Button>
         </DropdownMenuTrigger>
