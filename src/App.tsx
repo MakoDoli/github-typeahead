@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import List from "./components/List";
 import { Toaster } from "./components/ui/toaster";
 import SearchInput from "./components/SearchInput";
-import { LoaderProvider } from "./context/LoaderContext";
+//import { LoaderProvider } from "./context/LoaderContext";
 
 function App() {
   const currentMode =
@@ -11,7 +11,7 @@ function App() {
       window.matchMedia("(prefers-color-scheme: dark)").matches)
       ? "dark"
       : "light";
-  const [user, setUser] = useState("");
+
   const [amount, setAmount] = useState("5");
   const [theme, setTheme] = useState(currentMode);
   useEffect(() => {
@@ -22,18 +22,11 @@ function App() {
     }
   }, [theme]);
   return (
-    <LoaderProvider>
-      <div className="py-8 px-6 lg:px-48  min-h-screen dark:bg-slate-800">
-        <SearchInput
-          setUser={setUser}
-          setAmount={setAmount}
-          setTheme={setTheme}
-          mode={theme}
-        />
-        <List searchValue={user} amount={amount} />
-        <Toaster />
-      </div>
-    </LoaderProvider>
+    <div className="py-8 px-6 lg:px-48  min-h-screen dark:bg-slate-800">
+      <SearchInput setAmount={setAmount} setTheme={setTheme} mode={theme} />
+      <List amount={amount} />
+      <Toaster />
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 export interface ListProps {
-  searchValue: string;
   amount: string;
 }
 
@@ -17,7 +16,6 @@ export interface UserResultProps {
 }
 
 export interface SearchProps {
-  setUser: (e: string) => void;
   setAmount: (e: string) => void;
   setTheme: (e: string) => void;
   mode: string;
@@ -26,6 +24,8 @@ export interface SearchProps {
 export interface LoaderContextType {
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+  searchValue: string;
+  setSearchValue: (e: string) => void;
 }
 
 export interface UserType {
