@@ -16,7 +16,7 @@ export default function List({ searchValue, amount }: ListProps) {
   if (isLoading) return <Spinner />;
 
   return (
-    <div className="inline-block  dark:text-white">
+    <div className=" dark:text-white grid grid-cols-1 md:grid-cols-2">
       {slicedList.map((item) => (
         <User
           name={item.login}
