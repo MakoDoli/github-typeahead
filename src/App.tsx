@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import List from "./components/List";
 import { Toaster } from "./components/ui/toaster";
 import SearchInput from "./components/SearchInput";
-//import { LoaderProvider } from "./context/LoaderContext";
 
 function App() {
   const currentMode =
