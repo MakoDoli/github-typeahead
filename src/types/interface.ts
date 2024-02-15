@@ -19,6 +19,8 @@ export interface UserResultProps {
 export interface SearchProps {
   setUser: (e: string) => void;
   setAmount: (e: string) => void;
+  setTheme: (e: string) => void;
+  mode: string;
 }
 
 export interface LoaderContextType {
