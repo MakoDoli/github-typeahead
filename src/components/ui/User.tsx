@@ -5,14 +5,15 @@ import { Link } from "@tanstack/react-router";
 
 export default function User({ src, name }: UserResultProps) {
   return (
-    <Link to="/userInfo/$postId" params={{ postId: name }}>
-      {" "}
-      <div className="flex column gap-10 mt-10">
+    <div className="flex column gap-10 mt-10">
+      <Link to="/userInfo/$postId" params={{ postId: name }}>
         <Avatar>
           <AvatarImage src={src} />
         </Avatar>
+      </Link>
+      <Link to="/userInfo/$postId" params={{ postId: name }}>
         <h2>{name}</h2>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

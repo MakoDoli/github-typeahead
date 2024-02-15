@@ -6,8 +6,8 @@ import { BASE_URL } from "@/utils/constants";
 import useFetchData from "@/utils/useFetchData";
 import { useContext } from "react";
 
-export default function List({ searchValue, amount }: ListProps) {
-  const [list] = useFetchData(BASE_URL, searchValue);
+export default function List({ amount }: ListProps) {
+  const [list] = useFetchData(BASE_URL, sessionStorage.search);
 
   const { isLoading } = useContext(LoaderContext);
 

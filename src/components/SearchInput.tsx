@@ -27,6 +27,7 @@ export default function SearchInput({
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeoutId.current = setTimeout(() => {
       setUser(e.target.value);
+      sessionStorage.search = e.target.value;
     }, 1000);
   }
 
