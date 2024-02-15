@@ -59,7 +59,7 @@ export default function SearchInput({
         </DropdownMenuContent>
       </DropdownMenu>
       <Button onClick={handleTheme}>
-        {mode === "dark" ? "go blind" : "save my eyes"}
+        {mode === "dark" ? "Let it shine" : "Save my eyes"}
       </Button>
     </div>
   );
