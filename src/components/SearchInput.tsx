@@ -22,13 +22,10 @@ export default function SearchInput({
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
 
   const [results, setResults] = useState("5");
-  // const [theme, setTheme] = useState("light");
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     if (timeoutId.current) clearTimeout(timeoutId.current);
     timeoutId.current = setTimeout(() => {
-      //setUser(e.target.value);
-      //sessionStorage.search = e.target.value;
       setSearchValue(e.target.value);
     }, 1000);
   }
