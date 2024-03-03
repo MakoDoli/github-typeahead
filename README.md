@@ -15,22 +15,26 @@ To get a local copy up and running, follow these simple steps:
 1. Clone the repository to your local machine using the following command:
 
 ```
-git clone https://github.com/your-username/project-name.git ```
+git clone https://github.com/your-username/project-name.git
+```
 
 Navigate into the project directory:
 
 
-```cd project-name ```
+```cd project-name
+```
 Install dependencies using npm:
 
-```npm install ```
+```npm install
+```
 
 ##Running the Application
 
 To run the application locally, execute the following command:
 
 
-```npm run dev```
+```npm run dev
+```
 This will start the development server. You can view the application by opening http://localhost:3000 in your web browser.
 
 
