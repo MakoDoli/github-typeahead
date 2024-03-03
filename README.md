@@ -30,7 +30,7 @@ Install dependencies using npm:
 npm install
 ```
 
-##Running the Application
+## Running the Application
 
 To run the application locally, execute the following command:
 
