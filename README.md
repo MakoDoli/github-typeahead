@@ -1,6 +1,12 @@
 # Project Name
 
-Welcome to the [gihub user search] repository! This project was created with "npm create vite@latest" with React, and TypeScript, with additional dependencies including Tailwind CSS, Tanstack Router, and Shadcn Library.
+Welcome to the gihub user search repository! This project was created with 
+```
+npm create vite@latest
+```
+ with React, and TypeScript, 
+ 
+ with additional dependencies including Tailwind CSS, Tanstack Router, and Shadcn Library.
 
 ## Prerequisites
 
