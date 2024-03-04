@@ -1,6 +1,6 @@
 # Github User Search App
 
-Welcome to the **Gihub User Search App** repository! 
+Welcome 👋 to the **Gihub User Search App** repository! 
 
 This project was created with 
 ```
@@ -33,7 +33,7 @@ Install dependencies using npm:
 npm install
 ```
 
-In order to use Acernity library run
+In order to use Aceternity library run
 ```
 npm i framer-motion clsx 
 npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
@@ -49,7 +49,8 @@ npm run dev
 ```
 This will start the development server. You can view the application by opening http://localhost:3000 in your web browser.
 
-### **Github User Seacrh** app allows you to search for github user by entering github username in input field
+
+ **Github User Seacrh App**  allows you to search for github user by entering github username in input field
 
 ![Preview Image](src/assets/preview1.png)
 
