@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import List from "./components/List";
-import { Toaster } from "./components/ui/toaster";
-import SearchInput from "./components/SearchInput";
+import List from "./List";
+import { Toaster } from "./ui/toaster";
+import SearchInput from "./SearchInput";
 
-function App() {
+function HomePage() {
   const currentMode =
     sessionStorage.theme === "dark" ||
     (!("theme" in sessionStorage) &&
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
