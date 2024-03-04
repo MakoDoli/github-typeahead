@@ -35,7 +35,7 @@ npm install
 
 In order to use Aceternity library run
 ```
-npm i framer-motion clsx 
+npm i framer-motion clsx tailwind-merge
 npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
 ```
 
@@ -60,9 +60,9 @@ You can choose how many results to display. After clicking user name you are dir
 
 You can switch between light and dark mode
 
-The project is build with __tailwindcss__ and UI libraries such as __Shadcn__ and __Aceternity__ . 
+The project is build with [__tailwindcss__](https://tailwindcss.com/) and UI libraries such as [__Shadcn__](https://ui.shadcn.com/) and [__Aceternity__](https://ui.aceternity.com/) . 
 
-I used __Tanstack__ router for page navigation and __Context API__ for data access.
+I used [__Tanstack__](https://tanstack.com/router/latest) router for page navigation and __Context API__ for data access.
 
 
 
