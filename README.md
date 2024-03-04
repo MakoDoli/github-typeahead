@@ -23,7 +23,7 @@ To get a local copy up and running, follow these simple steps:
 1. Clone the repository to your local project directory using the following command:
 
 ```
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/MakoDoli/github-typeahead.git
 ```
 
 
@@ -33,11 +33,7 @@ Install dependencies using npm:
 npm install
 ```
 
-In order to use Aceternity library run
-```
-npm i framer-motion clsx tailwind-merge
-npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
-```
+
 
 ## Running the Application
 
