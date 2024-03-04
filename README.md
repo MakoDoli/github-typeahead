@@ -1,12 +1,14 @@
-# Project Name
+# Github User Search App
 
-Welcome to the gihub user search repository! This project was created with 
+Welcome to the **Gihub User Search App** repository! 
+
+This project was created with 
 ```
 npm create vite@latest
 ```
-uisng React and then TypeScript
+uisng __React__ and  __TypeScript__
  
- with additional dependencies including Tailwind CSS, Tanstack Router, and Shadcn Library.
+ with additional dependencies including Tailwind CSS, Tanstack Router, and Shadcn and Aceternity Libraries.
 
 ## Prerequisites
 
@@ -18,22 +20,23 @@ Before you begin, ensure you have met the following requirements:
 
 To get a local copy up and running, follow these simple steps:
 
-1. Clone the repository to your local machine using the following command:
+1. Clone the repository to your local project directory using the following command:
 
 ```
 git clone https://github.com/your-username/project-name.git
 ```
 
-Navigate into the project directory:
 
-
-```
-cd project-name
-```
 Install dependencies using npm:
 
 ```
 npm install
+```
+
+In order to use Acernity library run
+```
+npm i framer-motion clsx 
+npm i framer-motion clsx tailwind-merge @tsparticles/react @tsparticles/engine @tsparticles/slim
 ```
 
 ## Running the Application
@@ -46,35 +49,19 @@ npm run dev
 ```
 This will start the development server. You can view the application by opening http://localhost:3000 in your web browser.
 
+### **Github User Seacrh** app allows you to search for github user by entering github username in input field
+
+![Preview Image](src/assets/preview1.png)
+
+You can choose how many results to display. After clicking user name you are directed to the page which displays user info with available link to user's github account
+
+![Preview image](src/assets/preview2.png)
+
+You can switch between light and dark mode
+
+The project is build with __tailwindcss__ and UI libraries such as __Shadcn__ and __Aceternity__ . 
+
+I used __Tanstack__ router for page navigation and __Context API__ for data access.
 
 
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
