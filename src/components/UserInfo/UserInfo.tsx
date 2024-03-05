@@ -16,7 +16,7 @@ type SearchType = {
   searchValue: string;
 };
 
-function UserInfo({ searchValue }: SearchType) {
+export default function UserInfo({ searchValue }: SearchType) {
   const postId = searchValue;
 
   const [isLoading, setisLoading] = useState(false);
@@ -30,6 +30,18 @@ function UserInfo({ searchValue }: SearchType) {
   });
 
   useEffect(() => {
+    async function getData(url: string, id: string) {
+      try {
+        setisLoading(true);
+        const res = await fetch(url + id);
+        const data = await res.json();
+        setInfo(data);
+      } catch (err) {
+        console.warn(err);
+      } finally {
+        setisLoading(false);
+      }
+    }
     getData(BASE_URL_USER, postId);
   }, [postId]);
 
@@ -41,19 +53,6 @@ function UserInfo({ searchValue }: SearchType) {
     html_url: htmlUrl,
     public_repos: publicRepos,
   } = info;
-
-  async function getData(url: string, id: string) {
-    try {
-      setisLoading(true);
-      const res = await fetch(url + id);
-      const data = await res.json();
-      setInfo(data);
-    } catch (err) {
-      console.warn(err);
-    } finally {
-      setisLoading(false);
-    }
-  }
 
   if (isLoading) return <Spinner />;
   return (
@@ -104,4 +103,3 @@ function UserInfo({ searchValue }: SearchType) {
     </div>
   );
 }
-export default UserInfo;
