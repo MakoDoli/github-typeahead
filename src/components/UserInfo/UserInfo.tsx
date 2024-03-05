@@ -1,17 +1,21 @@
 import Spinner from "@/components/ui/Spinner";
 import { Button } from "@/components/ui/button";
-import { UserType } from "@/types/interface";
+import { UserType } from "./UserInfoType";
 import { BASE_URL_USER } from "@/utils/constants";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { SearchType } from "../types/interface";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import github from "../assets/github.png";
-import { BackgroundGradient } from "./ui/background-gradient";
+import github from "../../assets/github.png";
+import { BackgroundGradient } from "../ui/background-gradient";
+
+type SearchType = {
+  searchValue: string;
+};
+
 function UserInfo({ searchValue }: SearchType) {
   const postId = searchValue;
 

@@ -1,7 +1,12 @@
 import { Avatar } from "@/components/ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
-import { UserResultProps } from "@/types/interface";
 import { Link } from "@tanstack/react-router";
+
+type UserResultProps = {
+  src: string;
+  name: string;
+  url: string;
+};
 
 export default function User({ src, name }: UserResultProps) {
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import List from "./List";
-import { Toaster } from "./ui/toaster";
-import SearchInput from "./SearchInput";
+import List from "../UserList/List";
+import { Toaster } from "../ui/toaster";
+import SearchInput from "../SearchInput/SearchInput";
 
 function HomePage() {
   const currentMode =

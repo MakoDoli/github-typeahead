@@ -1,5 +1,5 @@
 import { createLazyFileRoute } from "@tanstack/react-router";
-import UserInfo from "@/components/UserInfo";
+import UserInfo from "@/components/UserInfo/UserInfo";
 
 const UserProfile = () => {
   const { postId } = Route.useParams();
