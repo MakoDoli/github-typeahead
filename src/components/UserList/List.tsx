@@ -1,10 +1,13 @@
 import { LoaderContext } from "@/context/LoaderContext";
-import Spinner from "./ui/Spinner";
-import User from "./ui/User";
-import { ListProps } from "@/types/interface";
+import Spinner from "../ui/Spinner";
+import User from "../ui/User";
 import { BASE_URL } from "@/utils/constants";
 import useFetchData from "@/services/useFetchData";
 import { useContext } from "react";
+
+ type ListProps = {
+  amount: string;
+};
 
 export default function List({ amount }: ListProps) {
   const { searchValue } = useContext(LoaderContext);

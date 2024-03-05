@@ -13,28 +13,27 @@ export default function useFetchData(url: string, id: string) {
   const [errorMessage, setErrorMessage] = useState(message);
 
   useEffect(() => {
+    async function getData(url: string, id: string) {
+      setErrorMessage(message);
+      setIsLoading(true);
+      setIsError(false);
+      try {
+        const res = await fetch(url + id);
+        const data = await res.json();
+        if (data?.items.length === 0) setIsError(true);
+        setList(data.items);
+      } catch (err) {
+        setErrorMessage((err as Error).message);
+        setIsError(true);
+        console.warn(err);
+      } finally {
+        setIsLoading(false);
+      }
+    }
     if (id) getData(url, id);
     if (!id) setList([]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [url, id]);
+  }, [url, id, setIsLoading]);
 
-  async function getData(url: string, id: string) {
-    setErrorMessage(message);
-    setIsLoading(true);
-    setIsError(false);
-    try {
-      const res = await fetch(url + id);
-      const data = await res.json();
-      if (data?.items.length === 0) setIsError(true);
-      setList(data.items);
-    } catch (err) {
-      setErrorMessage((err as Error).message);
-      setIsError(true);
-      console.warn(err);
-    } finally {
-      setIsLoading(false);
-    }
-  }
   useEffect(() => {
     if (isError) {
       toast({ description: errorMessage });

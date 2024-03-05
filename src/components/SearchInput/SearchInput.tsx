@@ -1,6 +1,6 @@
 import { Input } from "@/components/ui/input";
 import { ChangeEvent, useContext, useEffect, useRef, useState } from "react";
-import { SearchProps } from "@/types/interface";
+import { SearchProps } from "./SearchInputType";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

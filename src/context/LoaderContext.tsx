@@ -1,5 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
-import { LoaderContextType } from "@/types/interface";
+import { LoaderContextType } from "./LoaderContextType";
 
 export const LoaderContext = createContext<LoaderContextType>({
   isLoading: false,
