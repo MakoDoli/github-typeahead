@@ -31,7 +31,7 @@ export default function SearchInput({
   }
 
   function handleTheme() {
-    sessionStorage.theme = mode === "dark" ? "light" : "dark";
+    localStorage.theme = mode === "dark" ? "light" : "dark";
     setTheme(mode === "dark" ? "light" : "dark");
   }
 

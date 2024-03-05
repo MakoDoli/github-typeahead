@@ -5,8 +5,8 @@ import SearchInput from "../SearchInput/SearchInput";
 
 function HomePage() {
   const currentMode =
-    sessionStorage.theme === "dark" ||
-    (!("theme" in sessionStorage) &&
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
       window.matchMedia("(prefers-color-scheme: dark)").matches)
       ? "dark"
       : "light";
