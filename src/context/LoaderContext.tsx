@@ -15,6 +15,7 @@ interface LoaderProviderProps {
 export const LoaderProvider = ({ children }: LoaderProviderProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+
   return (
     <LoaderContext.Provider
       value={{
