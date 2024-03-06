@@ -1,5 +1,5 @@
 import { Input } from "@/components/ui/input";
-import { ChangeEvent, useContext, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useRef } from "react";
 import { SearchProps } from "./SearchInputType";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,10 +18,8 @@ export default function SearchInput({
   setTheme,
   mode,
 }: SearchProps) {
-  const { setSearchValue } = useContext(LoaderContext);
+  const { setSearchValue, results, setResults } = useContext(LoaderContext);
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
-
-  const [results, setResults] = useState("5");
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     if (timeoutId.current) clearTimeout(timeoutId.current);
