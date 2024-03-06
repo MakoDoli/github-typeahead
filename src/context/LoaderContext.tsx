@@ -6,6 +6,8 @@ export const LoaderContext = createContext<LoaderContextType>({
   setIsLoading: () => {},
   searchValue: "",
   setSearchValue: () => {},
+  results: "",
+  setResults: () => {},
 });
 
 interface LoaderProviderProps {
@@ -15,6 +17,7 @@ interface LoaderProviderProps {
 export const LoaderProvider = ({ children }: LoaderProviderProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [searchValue, setSearchValue] = useState("");
+  const [results, setResults] = useState("5");
 
   return (
     <LoaderContext.Provider
@@ -23,6 +26,8 @@ export const LoaderProvider = ({ children }: LoaderProviderProps) => {
         setIsLoading,
         searchValue,
         setSearchValue,
+        results,
+        setResults,
       }}
     >
       {children}
