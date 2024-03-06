@@ -8,7 +8,9 @@ npm create vite@latest
 ```
 uisng __React__ and  __TypeScript__
  
- with additional dependencies including Tailwind CSS, Tanstack Router, and Shadcn and Aceternity Libraries.
+The project is build using [__tailwindcss__](https://tailwindcss.com/) and UI libraries such as [__Shadcn__](https://ui.shadcn.com/) and [__Aceternity__](https://ui.aceternity.com/) . 
+
+I used [__Tanstack__](https://tanstack.com/router/latest) router for page navigation and __Context API__ for data access.
 
 ## Prerequisites
 
@@ -46,7 +48,7 @@ npm run dev
 This will start the development server. You can view the application by opening http://localhost:3000 in your web browser.
 
 
- **Github User Seacrh App**  allows you to search for github user by entering github username in input field
+ **Github User Search App**  allows you to search for github user by entering github username in input field
 
 ![Preview Image](src/assets/preview1.png)
 
@@ -54,11 +56,9 @@ You can choose how many results to display. After clicking user name you are dir
 
 ![Preview image](src/assets/preview2.png)
 
-You can switch between light and dark mode
+You can switch between light and dark mode. 
+Pages are available after refresh as well.
 
-The project is build with [__tailwindcss__](https://tailwindcss.com/) and UI libraries such as [__Shadcn__](https://ui.shadcn.com/) and [__Aceternity__](https://ui.aceternity.com/) . 
-
-I used [__Tanstack__](https://tanstack.com/router/latest) router for page navigation and __Context API__ for data access.
 
 
 
